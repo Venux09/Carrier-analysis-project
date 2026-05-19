@@ -1,0 +1,24 @@
+career-analysis/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── predictions/
+│
+├── notebooks/
+│   ├── cleaning.ipynb
+│   ├── stream_analysis.ipynb
+│   ├── salary_analysis.ipynb
+│   ├── growth_prediction.ipynb
+│   └── misinformation_analysis.ipynb
+│
+├── outputs/
+│   ├── charts/
+│   ├── reports/
+│   └── ui_mockups/
+│
+├── app/
+│   └── ui_interface.py
+│
+├── README.md
+└── plan_file.txt
