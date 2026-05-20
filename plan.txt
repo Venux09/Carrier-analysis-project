@@ -7,7 +7,7 @@ career-analysis/
 │
 ├── notebooks/
 │   ├── cleaning.ipynb
-│   ├── stream_analysis.ipynb
+│   ├── stream_analysis.ipyn..
 │   ├── salary_analysis.ipynb
 │   ├── growth_prediction.ipynb
 │   └── misinformation_analysis.ipynb
