@@ -1,0 +1,11 @@
+Student_ID,Major_Stream,Minor_Specialization,Mid_Instruction,State_Region
+ST_0000001,Science,PCM (Physics-Chemistry-Maths),English,Haryana
+ST_0000002,Science,PCB (Physics-Chemistry-Biology),English,Telangana
+ST_0000003,Science,PCMB (General Science),Hindi,Uttar Pradesh
+ST_0000004,Arts,History-PolScience-Sociology,Hindi,Rajasthan
+ST_0000005,Arts,Psychology-Economics-Literature,English,Delhi
+ST_0000006,Arts,Geography-History-PublicAdmin,Regional,Gujarat
+ST_0000007,Commerce,Accountancy-BusinessStudies-Maths,English,Karnataka
+ST_0000008,Commerce,Accountancy-Economics-Informatics,English,Maharashtra
+ST_0000009,Vocational,ITI Computer Operator & Programming,English,Tamil Nadu
+ST_0000010,Vocational,Diploma in Mechanical Engineering,Regional,Punjab

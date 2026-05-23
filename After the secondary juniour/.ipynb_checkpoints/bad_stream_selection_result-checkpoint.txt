@@ -1,0 +1,6 @@
+Stream / Education Choice,Failure Risk (Unemployment Rate),Regret Rate within 3 Years,The Real-World Market Reality
+Generic Humanities / Arts Degree,15.0% - 18.0%,65.0%,High focus on rote memory; low market alignment unless specialized in Economics/Data.
+Generic Commerce / B.Com,10.5% - 12.0%,55.0%,Oversaturated market; plain degrees fail without additional fintech or data analysis tools.
+Low-Tier Science / Engineering (PCM),38.0% - 40.0% (Under Age 25),73%,Massive supply over-saturation; 5 million graduates added yearly but only 2.8 million find work.
+Medical / PCMB (Without NEET Selection),25.0% (NEET Dropout rate/idle),50%,Students get trapped in multiple gap years without alternative practical skill pipelines.
+Vocational / Technical Diploma,3.1% - 4.2%,< 15%,Highest job-market absorption rate; severe shortage of formally skilled technicians.
