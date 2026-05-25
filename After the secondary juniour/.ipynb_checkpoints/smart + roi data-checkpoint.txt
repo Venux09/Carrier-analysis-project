@@ -1,0 +1,6 @@
+Hyper-Hybrid Career Route,Estimated Adopter Share (%),Average ROI Timeline (Months),Primary Income Streams,Core Personal Branding Engine
+Niche Language + Tech Integration (e.g. Japanese + AI Workflow),12,6-9,"Cross-Border Technical Consulting, Localization Prompting, High-Value Bilingual IT Operations","LinkedIn Expert Insights, Technical Content Hubs"
+Early Skill Mastery (Micro-SaaS & Custom Workflow Automation),28,3-6,"No-Code/Low-Code Dev, AI Integration Contracts, Freelance Workflow Audits","X (Twitter) Build-in-Public, GitHub Repositories"
+Professional Virtual Characters (VTubing & AI Avatar IP),15,12-18,"Digital Merchandising, Brand Sponsorships, Live-Stream Superchats, IP Licensing","YouTube, Twitch, Instagram Reels"
+Premium Content Strategy & Personal Brand Monitisation,25,4-8,"Ghostwriting for CXOs, Private Communities, Cohort-Based Courses, Paid Newsletters","LinkedIn Newsletters, Medium, Premium Substack"
+Solopreneur Product Management & Growth Hacking,20,8-12,"Independent Performance Marketing Consulting, Micro-Product Launches, Fractional CMO Work","Personal Website, Specialized YouTube Channels, Industry Podcasts"
