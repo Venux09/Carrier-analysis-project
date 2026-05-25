@@ -1,0 +1,6 @@
+Stream,Class 10-12 Chosen (%),Real-World Employment Reality (%),Primary Job Sectors
+Science (Engineering/IT),42,18,"IT/Software Services, Core Engineering, Data Analytics, Sales & Marketing (EdTech/B2B)"
+Science (Medical/Bio),10,5,"Healthcare, Pharmaceuticals, Biotechnology, Sales/Medical Rep"
+Commerce,14,32,"Corporate Finance, Accounting, Banking, Audit, Sales & Business Development"
+Arts/Humanities,40,40,"Civil Services, Content Creation, Teaching, Law, Media, BPO, Sales/Marketing"
+Vocational/Diploma,4,5,"Technicians, Trades, Junior Mechanics, Specialized Operations"
