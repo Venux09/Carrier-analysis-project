@@ -1,0 +1,6 @@
+School_Category,Location_Type,Management_Type,Total_Schools,Restricted_Streams_No_Guidance,Comprehensive_Streams_With_Guidance
+Category A,Urban,Private,1500,350,1150
+Category B,Urban,Government,1000,650,350
+Category C,Rural,Private,1200,720,480
+Category D,Rural,Government,1300,1050,250
+Total,,Total,5000,2770,2230
