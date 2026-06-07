@@ -201,3 +201,13 @@ Upcoming work:
 ### Key Achievement
 
 The homepage foundation is now completed and the project has a clear direction. The next phase will focus on deep analysis of individual streams and career pathways.
+
+
+### Science Section 
+ * Introducion of what is science as a subject
+ * what is the reality of what you can study if you are choossing science
+ * its combination and other things you can do as a whole
+ * showing the min max and avg salary what you can get right now
+ * the second thing is that i did the data visualization of the comparision of the salaries of the differetn jobes .
+-- this is the progress till now
+   
