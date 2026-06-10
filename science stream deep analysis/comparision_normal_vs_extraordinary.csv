@@ -1,0 +1,21 @@
+Year,Student_Path,Path_Choice_Score,Success_Score,Milestone_Note
+1,Student A (Normal),1.0,1.0,College Start - Relying only on college syllabus
+2,Student A (Normal),2.0,1.2,Following the crowd - Basic web dev tutorials
+3,Student A (Normal),2.5,1.5,Mass applying - Low-paid local internship
+4,Student A (Normal),3.0,2.0,Graduation - Stuck in the saturated entry-level pool
+5,Student A (Normal),3.2,2.5,Corporate grinding - Standard low-leverage increment
+6,Student A (Normal),3.5,3.0,Mid-Level promotion - High competition environment
+7,Student A (Normal),3.8,3.5,Swapping companies - Standard local lateral move
+8,Student A (Normal),4.0,4.0,Senior title - Facing heavy corporate bottleneck
+9,Student A (Normal),4.2,4.2,Skills plateau - Salary stagnation begins
+10,Student A (Normal),4.5,4.5,Market limit - Reached maximum traditional ceiling
+1,Student B (Extraordinary),2.0,1.0,College Start - AI engineering fundamentals + JLPT N5 Language
+2,Student B (Extraordinary),4.0,1.5,Building consistency - Data pipelines + JLPT N4 Fluency
+3,Student B (Extraordinary),6.5,2.5,Asymmetric move - JLPT N3 + Global remote internship
+4,Student B (Extraordinary),8.0,5.0,Graduation - Bypassing local filters for Global AI Placement
+5,Student B (Extraordinary),8.5,6.0,Compounding value - Language premium + high-scale architecture
+6,Student B (Extraordinary),9.0,7.0,Specialization win - Mid-Level Global Architect role
+7,Student B (Extraordinary),9.2,8.0,High leverage - Managing cross-border tech infrastructure
+8,Student B (Extraordinary),9.5,9.0,Market monopoly - Specialized AI Consulting
+9,Student B (Extraordinary),9.8,9.5,Elite execution - Principal AI Architect position
+10,Student B (Extraordinary),10.0,10.0,Complete Freedom - Elite industry outlier with total autonomy
