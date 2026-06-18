@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "Science",
+    "subtitle": "An academic track centered on natural and physical sciences, technology, and mathematics — built for analytical and problem-solving careers in healthcare, engineering, and tech."
+  },
+
+  "indianReality": {
+    "text": "In over 90% of Indian schools, only two primary combinations are actually offered — Non-Medical (PCM) and Medical (PCB)."
+  },
+
+  "countryFlexibility": [
+    { "name": "UK A-Levels", "value": 21.3 },
+    { "name": "Canada HS System", "value": 19.1 },
+    { "name": "Australia Sr Secondary", "value": 17.0 },
+    { "name": "Germany Gymnasium", "value": 12.8 },
+    { "name": "USA STEM System", "value": 16.0 },
+    { "name": "Singapore JC", "value": 10.6 },
+    { "name": "India PCM", "value": 1.1 },
+    { "name": "India PCB", "value": 0.8 },
+    { "name": "India PCMB", "value": 0.3 }
+  ],
+
+  "salaryByStream": [
+    { "name": "PCM", "min": 4.80, "mid": 8.17, "max": 24.0 },
+    { "name": "PCB", "min": 2.80, "mid": 5.54, "max": 18.0 },
+    { "name": "PCMB", "min": 5.00, "mid": 5.00, "max": 5.0 }
+  ],
+
+  "pcbCareers": [
+    { "name": "General Physician (MBBS)", "current": 9.0, "future": 15.0, "aspirants": 1200000, "professionals": 1400000, "status": "Under-saturated / High Demand" },
+    { "name": "Specialist Doctor (MD/MS)", "current": 18.0, "future": 30.0, "aspirants": 100000, "professionals": 350000, "status": "Highly Under-saturated" },
+    { "name": "Dentist (BDS)", "current": 4.5, "future": 7.0, "aspirants": 300000, "professionals": 280000, "status": "Highly Saturated" },
+    { "name": "Pharmacist (B.Pharm)", "current": 3.5, "future": 5.5, "aspirants": 250000, "professionals": 600000, "status": "Saturated" },
+    { "name": "Registered Nurse (B.Sc)", "current": 3.2, "future": 5.0, "aspirants": 400000, "professionals": 1800000, "status": "Balanced Demand" },
+    { "name": "Veterinarian (BVSc)", "current": 5.5, "future": 8.5, "aspirants": 500000, "professionals": 750000, "status": "Under-saturated" },
+    { "name": "Physiotherapist (BPT)", "current": 4.0, "future": 6.5, "aspirants": 800000, "professionals": 120000, "status": "Balanced Demand" },
+    { "name": "Medical Lab Technologist", "current": 2.8, "future": 4.2, "aspirants": 150000, "professionals": 500000, "status": "Saturated" },
+    { "name": "Research Scientist (Microbiology)", "current": 6.0, "future": 9.5, "aspirants": 90000, "professionals": 110000, "status": "Balanced Demand" },
+    { "name": "Biotechnologist", "current": 5.0, "future": 8.0, "aspirants": 120000, "professionals": 150000, "status": "Saturated / Low Local Core Jobs" },
+    { "name": "Ayurvedic Doctor (BAMS)", "current": 4.2, "future": 6.8, "aspirants": 150000, "professionals": 400000, "status": "Balanced / Growing Demand" },
+    { "name": "Homeopathic Doctor (BHMS)", "current": 3.8, "future": 5.5, "aspirants": 100000, "professionals": 300000, "status": "Saturated" },
+    { "name": "Nutritionist / Dietitian", "current": 3.5, "future": 5.5, "aspirants": 70000, "professionals": 110000, "status": "Balanced Demand" },
+    { "name": "Audiologist / Speech Therapist", "current": 4.5, "future": 7.2, "aspirants": 15000, "professionals": 35000, "status": "Under-saturated" }
+  ],
+
+  "pcmCareers": [
+    { "name": "Mechanical Engineer", "current": 5.5, "future": 8.0, "aspirants": 350000, "professionals": 1200000, "status": "Highly Saturated" },
+    { "name": "Civil Engineer", "current": 5.0, "future": 7.5, "aspirants": 400000, "professionals": 1500000, "status": "Highly Saturated" },
+    { "name": "Electrical Engineer", "current": 5.8, "future": 8.5, "aspirants": 300000, "professionals": 1000000, "status": "Saturated" },
+    { "name": "Chemical Engineer", "current": 6.5, "future": 10.0, "aspirants": 80000, "professionals": 250000, "status": "Balanced Demand" },
+    { "name": "Software Engineer (Core CS)", "current": 8.5, "future": 14.0, "aspirants": 800000, "professionals": 4500000, "status": "Highly Saturated at Entry Level" },
+    { "name": "Aerospace Engineer", "current": 8.0, "future": 13.0, "aspirants": 40000, "professionals": 60000, "status": "Under-saturated / Niche" },
+    { "name": "Architect (B.Arch)", "current": 5.2, "future": 8.0, "aspirants": 100000, "professionals": 250000, "status": "Saturated" },
+    { "name": "Commercial Pilot", "current": 24.0, "future": 36.0, "aspirants": 15000, "professionals": 25000, "status": "Under-saturated / High Cost Barrier" },
+    { "name": "Merchant Navy Officer", "current": 12.0, "future": 18.0, "aspirants": 40000, "professionals": 80000, "status": "Balanced Demand" },
+    { "name": "Actuary / Statistician", "current": 9.5, "future": 16.0, "aspirants": 20000, "professionals": 50000, "status": "Under-saturated" },
+    { "name": "Production / Industrial Engineer", "current": 4.8, "future": 7.0, "aspirants": 80000, "professionals": 350000, "status": "Saturated" },
+    { "name": "Geologist / Earth Scientist", "current": 7.0, "future": 10.5, "aspirants": 15000, "professionals": 45000, "status": "Balanced Demand" },
+    { "name": "Defense Services (Technical Entry)", "current": 8.0, "future": 12.0, "aspirants": 500000, "professionals": 60000, "status": "Highly Competitive / Under-staffed" },
+    { "name": "Astrophysicist / Space Scientist", "current": 7.5, "future": 12.0, "aspirants": 25000, "professionals": 15000, "status": "Niche / Low Openings" },
+    { "name": "Automobile Engineer", "current": 5.2, "future": 7.8, "aspirants": 120000, "professionals": 400000, "status": "Saturated" },
+    { "name": "Biomedical Engineer (PCMB)", "current": 5.0, "future": 8.5, "aspirants": 50000, "professionals": 90000, "status": "Balanced Demand" }
+  ],
+
+  "saturationInsights": [
+    "Specialist doctors command the highest current and projected salary — only 100K annual aspirants against 350K active professionals.",
+    "Dentistry is the entry trap: 300K aspirants chasing a market that already holds 280K professionals, depressing salaries to roughly four and a half lakhs.",
+    "Software engineering is saturated specifically at entry level — 4.5 million active professionals make early-career differentiation essential.",
+    "A commercial pilot path is under-saturated purely due to cost barriers, not lack of demand — 15K aspirants for a jump from twenty-four to thirty-six lakhs."
+  ],
+
+  "polymathComparison": {
+    "normalStudent": {
+      "label": "The Normal Student (Linear Saturated Track)",
+      "coreFocus": "College syllabus, passing grades, high-volume job boards",
+      "skillPortfolio": "Generic full-stack or basic coding, no differentiating languages",
+      "marketFriction": "Extreme — competing in a pool of 4.5+ million global applicants",
+      "economicResult": "Vulnerable to early plateauing and entry-level salary stagnation",
+      "scatter": [
+        { "x": 2, "y": 3 }, { "x": 3, "y": 4 }, { "x": 4, "y": 4.5 },
+        { "x": 5, "y": 5 }, { "x": 6, "y": 5.2 }, { "x": 7, "y": 5.5 },
+        { "x": 8, "y": 5.6 }, { "x": 8.5, "y": 5.8 }, { "x": 9, "y": 6 }, { "x": 9.5, "y": 6 }
+      ]
+    },
+    "awareStudent": {
+      "label": "The Aware Student (Compounding Polymath Track)",
+      "coreFocus": "Portfolio proof, deep tech specialization, asymmetric market gaps",
+      "skillPortfolio": "Practical AI engineering, JLPT N2 Japanese fluency, articulate communication",
+      "scatter": [
+        { "x": 2, "y": 3.2 }, { "x": 3, "y": 4.5 }, { "x": 4, "y": 6 },
+        { "x": 5, "y": 7.2 }, { "x": 6, "y": 8 }, { "x": 7, "y": 8.8 },
+        { "x": 8, "y": 9.3 }, { "x": 8.5, "y": 9.6 }, { "x": 9, "y": 9.8 }, { "x": 9.5, "y": 10 }
+      ]
+    }
+  },
+
+  "closingQuote": "Every path is hard. Competing with 4 million people for entry-level pay is hard. Building a rare multi-skill stack alone in your room is hard. The market just makes you choose which hard."
+}

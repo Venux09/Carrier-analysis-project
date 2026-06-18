@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block title %}Science — Carrier Codex{% endblock %}
+{% set active_page = 'science' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stream.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="stream-hero" style="background: var(--ink); color: var(--paper);">
+  <div class="eyebrow" style="color: var(--accent-science);">Stream Deep Dive &middot; 01</div>
+  <h1 style="color: var(--paper);">Science</h1>
+  <p class="hero-sub" style="color: #cfc9c0;">
+    An academic track centered on natural and physical sciences, technology, and mathematics — built for analytical and problem-solving careers in healthcare, engineering, and tech.
+  </p>
+  <div class="hero-rule" style="background: linear-gradient(to right, var(--accent-science), transparent);"></div>
+</section>
+
+<div class="stream-body">
+
+  <!-- India's structural constraint -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-science);">The Indian Reality</div>
+    <h2>Only Two Real Choices: PCM or PCB</h2>
+    <p class="prose">
+      In over 90% of Indian schools, only two primary combinations are actually offered — Non-Medical (PCM) and Medical (PCB). Compared globally, this is a strikingly narrow menu.
+    </p>
+    <div class="grid-2">
+      <div class="data-card">
+        <h3>Subject-combination freedom by country</h3>
+        <div class="data-subtitle" style="color: var(--accent-science);">Share of flexibility score — India barely registers</div>
+        <div class="chart-wrap">
+          <canvas id="countryChart"></canvas>
+        </div>
+      </div>
+      <div class="insight-bar" style="display:flex; flex-direction:column; justify-content:center;">
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-science);"></div>
+          <div class="insight-text">India offers <strong style="color: var(--accent-science);">far fewer</strong> science subject combinations than the UK, USA, Canada, Australia, Germany or Singapore.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-science);"></div>
+          <div class="insight-text">More combinations abroad let students build <strong style="color: var(--accent-science);">unique skill sets</strong> early — India's funnel forces everyone down the same two pipes.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-science);"></div>
+          <div class="insight-text">The conclusion isn't despair — it's that <strong style="color: var(--accent-science);">self-directed learning</strong> has to fill the gap school structure won't.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Salary by stream -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-science);">Compensation Baseline</div>
+    <h2>PCM vs PCB — The Salary Spread</h2>
+    <p class="prose">
+      Mid-career averages tell only part of the story — the gap between minimum baseline and peak traditional potential is where stream choice really shows its teeth.
+    </p>
+    <div class="stat-strip" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="stat-cell"><div class="stat-value" style="color: var(--accent-science);">₹8.17L</div><div class="stat-label">PCM mid-career avg</div></div>
+      <div class="stat-cell"><div class="stat-value" style="color: var(--accent-science);">₹5.54L</div><div class="stat-label">PCB mid-career avg</div></div>
+      <div class="stat-cell"><div class="stat-value" style="color: var(--accent-science);">₹24L</div><div class="stat-label">PCM peak potential</div></div>
+      <div class="stat-cell"><div class="stat-value" style="color: var(--accent-science);">₹18L</div><div class="stat-label">PCB peak potential</div></div>
+    </div>
+    <div class="data-card" style="margin-top:18px;">
+      <h3>Minimum / mid-career / peak salary by stream</h3>
+      <div class="data-subtitle" style="color: var(--accent-science);">Figures in ₹ lakhs per annum</div>
+      <div class="chart-wrap">
+        <canvas id="salaryChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career explorer toggle -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-science);">Career-Level Detail</div>
+    <h2>Where Each Career Actually Sits</h2>
+    <p class="prose">
+      Current average salary against projected future salary, career by career. Toggle between the Medical (PCB) and Non-Medical (PCM) pipelines.
+    </p>
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="btnPCB" style="background: var(--accent-science); border-color: var(--accent-science);">PCB &middot; Medical</button>
+      <button class="toggle-btn" id="btnPCM">PCM &middot; Non-Medical</button>
+    </div>
+    <div class="data-card">
+      <h3 id="careerChartTitle">PCB career paths — current vs projected</h3>
+      <div class="data-subtitle" style="color: var(--accent-science);">₹ lakhs per annum</div>
+      <div class="chart-wrap tall" style="height: 460px;">
+        <canvas id="careerChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Saturation insights -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-science);">Reading The Saturation Data</div>
+    <h2>Supply, Demand &amp; The Saturation Trap</h2>
+    <div class="insight-bar" id="saturationInsights"></div>
+  </section>
+
+  <!-- Polymath comparison -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-science);">Beyond The Traditional Track</div>
+    <h2>Normal Student vs The Aware Student</h2>
+    <p class="prose">
+      Both put in real effort. The difference isn't laziness — it's direction. One competes inside a saturated pool of 4.5 million; the other builds a rare combination the market can't easily replace.
+    </p>
+    <div class="grid-2">
+      <div class="data-card">
+        <h3>Effort vs success — linear track</h3>
+        <div class="data-subtitle" style="color: #a39c8f;">Generic skills, high-volume competition</div>
+        <div class="chart-wrap short">
+          <canvas id="scatterA"></canvas>
+        </div>
+      </div>
+      <div class="data-card">
+        <h3>Effort vs success — polymath track</h3>
+        <div class="data-subtitle" style="color: var(--accent-science);">Rare skill stack, compounding returns</div>
+        <div class="chart-wrap short">
+          <canvas id="scatterB"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="closing-quote" id="closingQuote"></div>
+  </section>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/science.js') }}"></script>
+{% endblock %}

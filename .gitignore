@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+database/chat_history.db
+venv/
+.venv/
+.env

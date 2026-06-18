@@ -2,9 +2,19 @@ from flask import Flask, render_template, request, jsonify
 import sqlite3
 import os
 
-from config import AI_SYSTEM_PROMPT, DATABASE_PATH
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
+
+from config import AI_SYSTEM_PROMPT, DATABASE_PATH, ANTHROPIC_API_KEY
 
 app = Flask(__name__)
+client = (
+    anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    if anthropic and ANTHROPIC_API_KEY
+    else None
+)
 
 
 def get_db():
@@ -29,34 +39,37 @@ def init_db():
     conn.close()
 
 
+init_db()
+
+
 @app.route("/")
 def home():
-    return render_template("home.html")#for the home page 
+    return render_template("home.html")
 
 
 @app.route("/science")
 def science():
-    return render_template("science.html")#for the science stream page 
+    return render_template("science.html")
 
 
 @app.route("/commerce")
 def commerce():
-    return render_template("commerce.html")#for the commerce stream section 
+    return render_template("commerce.html")
 
 
 @app.route("/arts")
 def arts():
-    return render_template("arts.html")#for the arts stream section 
+    return render_template("arts.html")
 
 
 @app.route("/about")
 def about():
-    return render_template("about.html")#for the about page details about the project and other things 
+    return render_template("about.html")
 
 
 @app.route("/chat")
 def chat():
-    return render_template("chat.html")# ai chat setup 
+    return render_template("chat.html")
 
 
 @app.route("/api/chat/history/<session_id>")
@@ -96,15 +109,29 @@ def chat_send():
         (session_id,),
     ).fetchall()
 
-    # ---- MODEL CALL GOES HERE ----
-    # messages = [{"role": "system", "content": AI_SYSTEM_PROMPT}]
-    # messages += [{"role": r["role"], "content": r["content"]} for r in history_rows]
-    # reply_text = call_your_llm(messages)
-    reply_text = (
-        "Career advice placeholder reply. Connect your model call in app.py "
-        "(see the MODEL CALL GOES HERE comment) to make this live."
-    )
-    # -------------------------------
+    # ---- MODEL CALL ----
+    if client is None:
+        reply_text = (
+            "AI Chat isn't configured yet. Add your ANTHROPIC_API_KEY to the .env file "
+            "in the project root, then restart the server."
+        )
+    else:
+        api_messages = [
+            {"role": r["role"], "content": r["content"]} for r in history_rows
+        ]
+        try:
+            response = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=600,
+                system=AI_SYSTEM_PROMPT,
+                messages=api_messages,
+            )
+            reply_text = "".join(
+                block.text for block in response.content if block.type == "text"
+            )
+        except Exception as exc:
+            reply_text = f"Something went wrong reaching the AI service: {exc}"
+    # ---------------------
 
     conn.execute(
         "INSERT INTO chat_messages (session_id, role, content) VALUES (?, ?, ?)",
@@ -117,6 +144,4 @@ def chat_send():
 
 
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
-
