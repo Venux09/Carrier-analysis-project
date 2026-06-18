@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Commerce",
+    "subtitle": "A branch of education focused on business, trade, financial systems, and the exchange of goods and services — how money, markets, and economies function in the real world."
+  },
+
+  "streamDistribution": [
+    { "name": "Arts & Humanities", "share": 45, "students": 6750000, "perception": "Default fallback / Government job aspirants" },
+    { "name": "Science (PCM/PCB)", "share": 35, "students": 5250000, "perception": "High parental pressure / Perceived high safety" },
+    { "name": "Commerce", "share": 20, "students": 3000000, "perception": "Perceived corporate pathway / Family business continuity" }
+  ],
+
+  "distributionInsights": [
+    "In rural areas almost everyone wants to be a government officer, which pushes Arts & Humanities to roughly 45% — double the share Commerce gets.",
+    "Most students who do pick Commerce admit they didn't really know what else to choose, unsure about Science and doubtful about opportunities in Arts.",
+    "Only around 10% of Commerce students say they actually know what they want to do with it.",
+    "About 15% avoid other streams purely because they want to escape Math, not because they're drawn to Commerce itself."
+  ],
+
+  "whyChooseReasons": [
+    { "category": "The Safe Middle (Fallback)", "share": 35, "translation": "Couldn't get or didn't want Science, but felt Arts lacked opportunity" },
+    { "category": "The Professional Grind", "share": 25, "translation": "Laser-focused on clearing high-leverage exams like CA for guaranteed stability" },
+    { "category": "The Math Escape", "share": 15, "translation": "Wants a corporate/office career but wants to soften the math load" },
+    { "category": "The Family Business", "share": 15, "translation": "Needs a baseline understanding of accounts and trade to run a family business" },
+    { "category": "The New-Age Builder", "share": 10, "translation": "Genuinely driven by startups, digital marketing, and modern finance" }
+  ],
+
+  "myths": [
+    {
+      "title": "The \"Fallback\" Fallacy",
+      "myth": "Commerce is only for average students who weren't smart enough to get into the Science stream.",
+      "reality": "This is a purely cultural bias. Science tests your ability to understand physical laws and complex formulas. Commerce tests your ability to understand human behavior, resource allocation, and systemic logic. Choosing Commerce isn't a demotion — it's a pivot toward the language of money and global markets."
+    },
+    {
+      "title": "The \"It's an Easy Stream\" Trap",
+      "myth": "There is no Physics or Chemistry, so Commerce must be a breeze.",
+      "reality": "The shock students face in Class 11 Accountancy is brutal. Balancing complex balance sheets, understanding microeconomic graphs, and navigating corporate law require intense logical discipline — many find it tougher than 12th-grade Science."
+    },
+    {
+      "title": "The \"AI Will Replace Accountants\" Fear",
+      "myth": "AI and software are going to do all the accounting and bookkeeping in a few years anyway.",
+      "reality": "AI will destroy clerical jobs like basic data entry and low-level bookkeeping. But it cannot legally audit a multinational corporation, negotiate a merger, or navigate tax loopholes — the strategic, client-facing advisory roles where the big money is remain strictly human."
+    },
+    {
+      "title": "The \"Limited Career Scope\" Illusion",
+      "myth": "Commerce only leads to becoming a CA, a bank clerk, or a useless B.Com degree.",
+      "reality": "The scope is arguably the widest across all industries — Investment Banking, Actuarial Science, Corporate Law, Management Consulting, Venture Capital, and Quant Trading all sit inside Commerce's elite tracks."
+    },
+    {
+      "title": "The \"Math is Optional\" Misstep",
+      "myth": "I hate Math, so I'll take Commerce to escape it.",
+      "reality": "You can pass high school Commerce without Math, but dropping it locks you out of the highest-paying financial careers on the planet — elite Economics, Quant Finance, and Data Analytics degrees strictly require advanced Mathematics."
+    }
+  ],
+
+  "traditionalVsModern": {
+    "traditionalPaths": [
+      { "name": "Chartered Accountant (CA) / Company Secretary (CS)", "desc": "Compliance, tax law, local auditing, and book balancing — high friction, massive study time, but safe corporate stability." },
+      { "name": "Retail Bank Manager / Corporate Accountant", "desc": "Physical cash operations, local lending, basic ledger entries, regional branch operations." },
+      { "name": "Traditional Insurance Actuary", "desc": "Calculating basic life expectancy and vehicle accident risk tables using static historical formulas." }
+    ],
+    "modernPaths": [
+      { "name": "Quant Finance Analyst / Algorithmic Trader", "desc": "Combining advanced statistics, Python coding, and machine learning to build models that execute trades in milliseconds." },
+      { "name": "Venture Capital & Startup Deal Striker", "desc": "Spotting raw tech talent, analyzing hyper-growth markets, structuring equity deals for early-stage companies." },
+      { "name": "M&A Corporate Lawyer", "desc": "Operating at the highest legal tier to orchestrate multi-billion dollar tech company takeovers and global asset restructuring." }
+    ],
+    "scoreComparison": {
+      "labels": ["Job Security", "Salary Growth", "Global Mobility", "Remote Work"],
+      "traditional": [9.5, 5.5, 4.0, 2.5],
+      "modern": [6.0, 10.0, 9.5, 8.0]
+    },
+    "scoreInsight": "Traditional Commerce wins decisively on job security. Everything else — salary growth ceiling, global mobility, remote work flexibility — favors the modern path by a wide margin."
+  },
+
+  "conclusion": {
+    "commodityPath": ["Rote syllabus only", "Follow the crowd", "Linear, capped growth"],
+    "monopolyPath": ["Skill 1: Hard tech / theory", "Skill 2: Deep language / moat", "Skill 3: High-leverage communication"],
+    "commodityResult": "Brutal mass saturation",
+    "monopolyResult": "Asymmetric global edge"
+  }
+}

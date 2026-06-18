@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Commerce — Carrier Codex{% endblock %}
+{% set active_page = 'commerce' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stream.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="stream-hero" style="background: var(--ink); color: var(--paper);">
+  <div class="eyebrow" style="color: var(--accent-commerce);">Stream Deep Dive &middot; 02</div>
+  <h1 style="color: var(--paper);">Commerce</h1>
+  <p class="hero-sub" style="color: #cfc9c0;">
+    A branch of education focused on business, trade, financial systems, and the exchange of goods and services — how money, markets, and economies function in the real world.
+  </p>
+  <div class="hero-rule" style="background: linear-gradient(to right, var(--accent-commerce), transparent);"></div>
+</section>
+
+<div class="stream-body">
+
+  <!-- Stream distribution -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-commerce);">Where Students Actually Go</div>
+    <h2>Commerce Gets The Smallest Share</h2>
+    <p class="prose">
+      Among the three streams, Commerce attracts the fewest students nationally — Arts & Humanities still dominates, largely driven by government-job aspirations in rural areas.
+    </p>
+    <div class="grid-2">
+      <div class="data-card">
+        <h3>Stream share of annual students</h3>
+        <div class="data-subtitle" style="color: var(--accent-commerce);">Estimated annual students by stream</div>
+        <div class="chart-wrap">
+          <canvas id="distributionChart"></canvas>
+        </div>
+      </div>
+      <div class="insight-bar" id="distributionInsights"></div>
+    </div>
+  </section>
+
+  <!-- Why students choose commerce -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-commerce);">The Real Motivation</div>
+    <h2>Why Students Actually Choose It</h2>
+    <p class="prose">
+      Rarely is it genuine passion. Most Commerce students land here through a mix of safety-seeking and uncertainty about the alternatives.
+    </p>
+    <div class="data-card">
+      <h3>Major reasons students choose Commerce</h3>
+      <div class="data-subtitle" style="color: var(--accent-commerce);">Share of students by stated reason</div>
+      <div class="chart-wrap tall">
+        <canvas id="reasonsChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Myths -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-commerce);">Common Misconceptions</div>
+    <h2>Myths vs Reality</h2>
+    <div id="mythsList"></div>
+  </section>
+
+  <!-- Traditional vs Modern -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-commerce);">Two Tracks, Same Stream</div>
+    <h2>Traditional vs Modern Commerce Paths</h2>
+    <div class="grid-2">
+      <div>
+        <h3 style="font-size:15px; margin-bottom:10px; color: var(--muted);">The Linear Grind</h3>
+        <div id="traditionalPaths"></div>
+      </div>
+      <div>
+        <h3 style="font-size:15px; margin-bottom:10px; color: var(--accent-commerce);">The Exponential Multipliers</h3>
+        <div id="modernPaths"></div>
+      </div>
+    </div>
+    <div class="data-card" style="margin-top:18px;">
+      <h3>Traditional vs Modern — scored comparison</h3>
+      <div class="data-subtitle" style="color: var(--accent-commerce);">Score out of 10 across four dimensions</div>
+      <div class="chart-wrap tall">
+        <canvas id="scoreChart"></canvas>
+      </div>
+    </div>
+    <div class="insight-bar" id="scoreInsight" style="margin-top:14px;"></div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-commerce);">The Critical Choice Point</div>
+    <h2>Commodity Path vs Monopoly Path</h2>
+    <div class="grid-2">
+      <div class="data-card">
+        <h3 style="color:#8a8478;">The Commodity Path</h3>
+        <div id="commodityList" style="margin-top:10px;"></div>
+        <div class="data-subtitle" style="margin-top:14px; color:#8a8478;" id="commodityResult"></div>
+      </div>
+      <div class="data-card" style="border-left: 3px solid var(--accent-commerce);">
+        <h3 style="color: var(--accent-commerce);">The Monopoly Path</h3>
+        <div id="monopolyList" style="margin-top:10px;"></div>
+        <div class="data-subtitle" style="margin-top:14px; color: var(--accent-commerce);" id="monopolyResult"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/commerce.js') }}"></script>
+{% endblock %}
