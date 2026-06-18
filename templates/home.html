@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Carrier Codex — Career Analytics{% endblock %}
+{% set active_page = 'home' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="eyebrow" style="color: var(--accent-gold); justify-content:center;">Carrier Codex</div>
+
+  <div class="hero-morph">
+    <h1 class="hero-text hero-text-1" id="heroText1">Decide Your Career</h1>
+    <h1 class="hero-text hero-text-2" id="heroText2">Career <span style="color: var(--accent-sakura);">Analytics</span></h1>
+  </div>
+
+  <p class="hero-sub" id="heroSub">
+    A quiet, honest look at what comes after class 10th — built from real data, not advice from someone who never had to choose.
+  </p>
+
+  <div class="scroll-cue" id="scrollCue">SCROLL<span>↓</span></div>
+</section>
+
+<section class="reveal-section">
+  <div class="reveal-card" data-accent="sakura">
+    <div class="section-label" style="color: var(--accent-sakura);">Why This Exists</div>
+    <h3>One Choice, Made Too Early</h3>
+    <p>Right after class 10th, students are asked to pick a stream — Science, Commerce, or Arts — often without real data, just opinions from relatives and toppers' success stories. Carrier Codex exists to replace that guesswork with actual numbers.</p>
+  </div>
+
+  <div class="reveal-card" data-accent="gold">
+    <div class="section-label" style="color: var(--accent-gold);">What It Actually Does</div>
+    <h3>Raw Data, Turned Into Clarity</h3>
+    <p>Every chart you'll see here comes from real research — salary ranges, market saturation, regret rates, and career trajectories — not generic career-counselor talking points. Built notebook by notebook, stream by stream.</p>
+  </div>
+
+  <div class="reveal-card" data-accent="decision">
+    <div class="section-label" style="color: var(--accent-decision);">Who Built It</div>
+    <h3>A Student's Honest Attempt</h3>
+    <p>This was built after my own class 10th, by sitting with the same confusion most students face — and trying to actually analyze it instead of just feeling it.</p>
+  </div>
+</section>
+
+<section class="streams-section">
+  <div class="streams-heading">
+    <div class="section-label" style="justify-content:center; color: var(--muted-light);">Choose A Path To Explore</div>
+    <h2>Three Streams. Real Numbers.</h2>
+  </div>
+
+  <div class="streams-grid">
+    <a href="{{ url_for('science') }}" class="stream-link" data-accent="science">
+      <div class="stream-name">Science</div>
+      <div class="stream-tag">PCM &middot; PCB &middot; PCMB</div>
+    </a>
+    <a href="{{ url_for('commerce') }}" class="stream-link" data-accent="commerce">
+      <div class="stream-name">Commerce</div>
+      <div class="stream-tag">Finance &middot; Business</div>
+    </a>
+    <a href="{{ url_for('arts') }}" class="stream-link" data-accent="arts">
+      <div class="stream-name">Arts</div>
+      <div class="stream-tag">Humanities &middot; Design</div>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

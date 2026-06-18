@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Carrier Codex{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+{% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<canvas id="sakura-canvas"></canvas>
+
+<nav class="navbar">
+  <a href="{{ url_for('home') }}" class="brand">Carrier<span>Codex</span></a>
+  <a href="{{ url_for('home') }}" class="nav-link {% if active_page == 'home' %}active{% endif %}">Home</a>
+  <a href="{{ url_for('science') }}" class="nav-link {% if active_page == 'science' %}active{% endif %}">Science</a>
+  <a href="{{ url_for('commerce') }}" class="nav-link {% if active_page == 'commerce' %}active{% endif %}">Commerce</a>
+  <a href="{{ url_for('arts') }}" class="nav-link {% if active_page == 'arts' %}active{% endif %}">Arts</a>
+  <a href="{{ url_for('chat') }}" class="nav-link {% if active_page == 'chat' %}active{% endif %}">AI Chat</a>
+  <a href="{{ url_for('about') }}" class="nav-link {% if active_page == 'about' %}active{% endif %}">About</a>
+</nav>
+
+<main style="position: relative; z-index: 10;">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <span>Carrier Codex &middot; Career Analytics</span>
+  <span class="footer-name">Monu Verma</span>
+</footer>
+
+<script src="{{ url_for('static', filename='js/sakura.js') }}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
