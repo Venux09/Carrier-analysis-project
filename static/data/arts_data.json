@@ -1,0 +1,124 @@
+{
+  "hero": {
+    "title": "Arts",
+    "subtitle": "An academic track focused on the study of human society, culture, behavior, and expression — exploring how humans interact, govern themselves, create, and think."
+  },
+
+  "whyChooseReasons": [
+    { "category": "Govt. Job (UPSC)", "share": 30 },
+    { "category": "Forced Choice", "share": 25 },
+    { "category": "Maths & Science Escape", "share": 15 },
+    { "category": "Law", "share": 15 },
+    { "category": "Side Hustle", "share": 10 },
+    { "category": "Passion / Creation", "share": 5 }
+  ],
+
+  "choiceInsights": [
+    "Most students choose Arts for government jobs — about 30% are specifically targeting UPSC and state PSC exams.",
+    "25% are here by forced choice, not genuine preference — they couldn't get into Science and felt Arts was safer than Commerce.",
+    "The smallest group, just 5%, are genuinely pursuing creative expression. That's the number this stream's reputation suffers for."
+  ],
+
+  "myths": [
+    {
+      "title": "The \"Dumping Ground\" Fallacy",
+      "myth": "Arts is only for students who scored poorly in 10th grade.",
+      "reality": "The world's most influential policymakers, legal minds, and strategists actively choose Arts. It takes high intellectual maturity to analyze complex societal frameworks, human behavioral patterns, and political philosophies — it's a stream of choice for students targeting law, design, and governance."
+    },
+    {
+      "title": "The \"Zero Employability\" Myth",
+      "myth": "If you take Arts, you will end up unemployed or in a low-paying job.",
+      "reality": "A generic Arts degree without direction is vulnerable. But specialized Humanities pathways — Law (CLAT/NLU), Design (NID/NIF), Clinical Psychology, and Policy — produce graduates who enter elite institutions with starting packages that match or exceed Science-stream averages."
+    },
+    {
+      "title": "The AI Shift Reality",
+      "myth": "Arts skills are \"soft\" and therefore low-value in a tech economy.",
+      "reality": "AI and software now handle rote logic, basic coding, and standard accounting. What AI cannot do is navigate human nuance, cultural context, ethical ambiguity, and complex negotiations. The skills Arts trains — critical thinking, behavioral analysis, abstract problem-solving — are becoming the scarcest and highest-paid in the market."
+    }
+  ],
+
+  "modernCareers": [
+    {
+      "name": "Cognitive UI/UX Architect",
+      "artsCore": "Psychology / Anthropology",
+      "techMultiplier": "Human-Computer Interaction (HCI) + Figma",
+      "salary": "₹18L - ₹35L",
+      "growthScore": 9.5
+    },
+    {
+      "name": "Behavioral Data Scientist",
+      "artsCore": "Economics / Sociology",
+      "techMultiplier": "Python / R + Predictive Analytics",
+      "salary": "₹20L - ₹40L",
+      "growthScore": 9.0
+    },
+    {
+      "name": "Conversational AI Designer",
+      "artsCore": "Linguistics / Literature",
+      "techMultiplier": "Large Language Models (LLMs) + NLP",
+      "salary": "₹15L - ₹30L",
+      "growthScore": 9.5
+    },
+    {
+      "name": "Geopolitical Risk Consultant",
+      "artsCore": "History / Geography",
+      "techMultiplier": "Big Data Risk Modeling + Trade Law",
+      "salary": "₹25L - ₹50L",
+      "growthScore": 8.5
+    },
+    {
+      "name": "Tech Ethicist / Policy Architect",
+      "artsCore": "Political Science / Philosophy",
+      "techMultiplier": "Cyber-Law + Data Privacy Frameworks",
+      "salary": "₹22L - ₹45L",
+      "growthScore": 9.0
+    },
+    {
+      "name": "Global Corporate Lawyer (M&A)",
+      "artsCore": "Legal Studies / History",
+      "techMultiplier": "Cross-Border Financial Structuring",
+      "salary": "₹25L - ₹60L",
+      "growthScore": 10.0
+    }
+  ],
+
+  "traditionalCareers": [
+    {
+      "name": "The Civil Servant (UPSC/IAS)",
+      "reality": "The ultimate prestige trap. Millions spend years in brutal preparation for a handful of seats.",
+      "saturation": "99.9% (Brutal Attrition)",
+      "salary": "₹10L - ₹15L Gross",
+      "growthScore": 8.0
+    },
+    {
+      "name": "High School Teacher (Humanities)",
+      "reality": "A stable but linearly capped career. Highly dependent on government hiring cycles.",
+      "saturation": "85% (High Supply)",
+      "salary": "₹3L - ₹8.7L",
+      "growthScore": 4.5
+    },
+    {
+      "name": "Traditional Print / Local Journalist",
+      "reality": "The old-media grind. Long hours, high stress, shrinking market due to digital disruption.",
+      "saturation": "80% (Shrinking Market)",
+      "salary": "₹3L - ₹8L",
+      "growthScore": 3.5
+    },
+    {
+      "name": "Local Litigation Lawyer",
+      "reality": "Requires years of low-paid apprenticeship under senior advocates before any real income.",
+      "saturation": "85% (Heavy Entry Friction)",
+      "salary": "₹2.5L - ₹5L",
+      "growthScore": 5.0
+    },
+    {
+      "name": "Govt. Clerk / SSC Employee",
+      "reality": "The ultimate safe fallback — highly secure but the most linearly capped growth path of all.",
+      "saturation": "98% (Hyper-Competitive)",
+      "salary": "₹3.5L - ₹6L",
+      "growthScore": 3.0
+    }
+  ],
+
+  "conclusion": "The Arts stream develops skills that are becoming increasingly valuable — communication, critical thinking, research, creativity, and understanding of human behavior. A stream alone does not decide a student's future. Success depends on awareness, skill development, consistency, and the ability to adapt to changing opportunities."
+}

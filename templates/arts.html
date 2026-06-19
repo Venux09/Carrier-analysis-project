@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Arts — Carrier Codex{% endblock %}
+{% set active_page = 'arts' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stream.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="stream-hero" style="background: var(--ink); color: var(--paper);">
+  <div class="eyebrow" style="color: var(--accent-arts);">Stream Deep Dive &middot; 03</div>
+  <h1 style="color: var(--paper);">Arts</h1>
+  <p class="hero-sub" style="color: #cfc9c0;">
+    An academic track focused on the study of human society, culture, behavior, and expression — exploring how humans interact, govern themselves, create, and think.
+  </p>
+  <div class="hero-rule" style="background: linear-gradient(to right, var(--accent-arts), transparent);"></div>
+</section>
+
+<div class="stream-body">
+
+  <!-- Why students choose arts -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-arts);">The Real Motivation</div>
+    <h2>Why Students Actually Choose Arts</h2>
+    <p class="prose">
+      Most students who choose Arts do so because of government job targets or as a fallback from Science. The smallest group — those genuinely passionate about creative expression — make up just 5%.
+    </p>
+    <div class="grid-2">
+      <div class="data-card">
+        <h3>Major reasons students choose Arts</h3>
+        <div class="data-subtitle" style="color: var(--accent-arts);">Share of students by primary motivation</div>
+        <div class="chart-wrap">
+          <canvas id="reasonsChart"></canvas>
+        </div>
+      </div>
+      <div class="insight-bar" id="choiceInsights"></div>
+    </div>
+  </section>
+
+  <!-- Myths -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-arts);">Common Misconceptions</div>
+    <h2>Three Myths Arts Students Face</h2>
+    <div id="mythsList"></div>
+  </section>
+
+  <!-- Modern careers -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-arts);">The New Opportunity Map</div>
+    <h2>Modern Career Paths — Arts + Tech</h2>
+    <p class="prose">
+      The highest-paying modern Arts careers are all hybrids: a strong humanities foundation multiplied by a specific technical skill. Here is what that actually looks like.
+    </p>
+
+    <div class="data-card" style="margin-bottom:18px;">
+      <h3>Modern career growth scores</h3>
+      <div class="data-subtitle" style="color: var(--accent-arts);">Score out of 10</div>
+      <div class="chart-wrap">
+        <canvas id="modernScoreChart"></canvas>
+      </div>
+    </div>
+
+    <div id="modernCareerCards"></div>
+  </section>
+
+  <!-- Traditional careers -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-arts);">The Traditional Track</div>
+    <h2>Where Most Arts Students End Up</h2>
+    <p class="prose">
+      The traditional Arts pipeline is dominated by government-exam saturation. UPSC carries 99.9% attrition — that's not a typo.
+    </p>
+
+    <div class="data-card" style="margin-bottom:18px;">
+      <h3>Traditional paths — growth score vs saturation</h3>
+      <div class="data-subtitle" style="color: var(--accent-arts);">Score out of 10 vs market saturation</div>
+      <div class="chart-wrap">
+        <canvas id="tradScoreChart"></canvas>
+      </div>
+    </div>
+
+    <div id="tradCareerCards"></div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="stream-section">
+    <div class="section-label" style="color: var(--accent-arts);">Conclusion</div>
+    <h2>What This All Means</h2>
+    <div class="closing-quote" id="conclusionQuote"></div>
+  </section>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/arts.js') }}"></script>
+{% endblock %}
