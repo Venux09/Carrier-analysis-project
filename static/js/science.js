@@ -8,18 +8,36 @@
   let careerChart = null;
   let data = null;
 
-  fetch("/static/data/science_data.json")
-    .then((res) => res.json())
-    .then((json) => {
-      data = json;
-      renderCountryChart();
-      renderSalaryChart();
-      renderCareerChart("pcb");
-      renderSaturationInsights();
-      renderScatterCharts();
-      renderClosingQuote();
-    })
-    .catch((err) => console.error("Failed to load science data:", err));
+  // Wait for Chart.js and CodexCharts to be available before loading data
+  function initWhenReady() {
+    if (typeof Chart !== "undefined" && typeof CodexCharts !== "undefined") {
+      loadData();
+    } else {
+      setTimeout(initWhenReady, 100);
+    }
+  }
+
+  function loadData() {
+    fetch("/static/data/science_data.json")
+      .then((res) => res.json())
+      .then((json) => {
+        data = json;
+        renderCountryChart();
+        renderSalaryChart();
+        renderCareerChart("pcb");
+        renderSaturationInsights();
+        renderScatterCharts();
+        renderClosingQuote();
+      })
+      .catch((err) => console.error("Failed to load science data:", err));
+  }
+
+  // Start initialization when page loads or immediately if already loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWhenReady);
+  } else {
+    initWhenReady();
+  }
 
   function renderCountryChart() {
     const ctx = document.getElementById("countryChart");

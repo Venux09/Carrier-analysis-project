@@ -1,6 +1,27 @@
 // Shared Chart.js defaults + helper builders for all stream pages.
 // Requires Chart.js to be loaded before this file.
 
+// Helper function to ensure Chart.js is loaded
+function ensureChartLoaded() {
+  return new Promise((resolve) => {
+    if (typeof Chart !== "undefined") {
+      resolve();
+    } else {
+      const checkInterval = setInterval(() => {
+        if (typeof Chart !== "undefined") {
+          clearInterval(checkInterval);
+          resolve();
+        }
+      }, 50);
+      // Timeout after 5 seconds
+      setTimeout(() => {
+        clearInterval(checkInterval);
+        resolve();
+      }, 5000);
+    }
+  });
+}
+
 const CodexCharts = (function () {
 
   const INK = "#1a1a1a";
@@ -27,6 +48,11 @@ const CodexCharts = (function () {
   }
 
   function donut(ctx, { labels, data, colors, accent }) {
+    // Ensure Chart.js is loaded before creating instance
+    if (typeof Chart === "undefined") {
+      console.error("Chart.js not loaded yet");
+      return null;
+    }
     return new Chart(ctx, {
       type: "doughnut",
       data: {
@@ -127,9 +153,18 @@ const CodexCharts = (function () {
   return { applyGlobalDefaults, donut, groupedBar, horizontalBar, scatter, INK, PAPER, MIST };
 })();
 
-// Apply defaults immediately (since this script loads at end of body, DOMContentLoaded may have already fired)
+// Apply defaults immediately, but wait for Chart.js to load from CDN if needed
+function applyDefaults() {
+  if (typeof Chart !== "undefined") {
+    CodexCharts.applyGlobalDefaults();
+  } else {
+    // Chart.js not yet loaded, retry in 50ms
+    setTimeout(applyDefaults, 50);
+  }
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", CodexCharts.applyGlobalDefaults);
+  document.addEventListener("DOMContentLoaded", applyDefaults);
 } else {
-  CodexCharts.applyGlobalDefaults();
+  applyDefaults();
 }

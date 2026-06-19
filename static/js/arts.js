@@ -5,19 +5,37 @@
   const MIST = "#d4cfc7";
   const INK = "#1a1a1a";
 
-  fetch("/static/data/arts_data.json")
-    .then((r) => r.json())
-    .then((data) => {
-      renderReasonsChart(data);
-      renderChoiceInsights(data);
-      renderMyths(data);
-      renderModernScoreChart(data);
-      renderModernCareerCards(data);
-      renderTradScoreChart(data);
-      renderTradCareerCards(data);
-      renderConclusion(data);
-    })
-    .catch((e) => console.error("Failed to load arts data:", e));
+  // Wait for Chart.js and CodexCharts to be available before loading data
+  function initWhenReady() {
+    if (typeof Chart !== "undefined" && typeof CodexCharts !== "undefined") {
+      loadData();
+    } else {
+      setTimeout(initWhenReady, 100);
+    }
+  }
+
+  function loadData() {
+    fetch("/static/data/arts_data.json")
+      .then((r) => r.json())
+      .then((data) => {
+        renderReasonsChart(data);
+        renderChoiceInsights(data);
+        renderMyths(data);
+        renderModernScoreChart(data);
+        renderModernCareerCards(data);
+        renderTradScoreChart(data);
+        renderTradCareerCards(data);
+        renderConclusion(data);
+      })
+      .catch((e) => console.error("Failed to load arts data:", e));
+  }
+
+  // Start initialization when page loads or immediately if already loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWhenReady);
+  } else {
+    initWhenReady();
+  }
 
   function renderReasonsChart(data) {
     const ctx = document.getElementById("reasonsChart");

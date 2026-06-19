@@ -1,23 +1,41 @@
-// Commerce page — loads commerce_data.json, renders charts + dynamic content.
+// Commerce page — loads commerce-data.json, renders charts + dynamic content.
 
 (function () {
   const ACCENT = "#b8923f";
   const MIST = "#d4cfc7";
   const INK = "#1a1a1a";
 
-  fetch("/static/data/commerce_data.json")
-    .then((r) => r.json())
-    .then((data) => {
-      renderDistributionChart(data);
-      renderDistributionInsights(data);
-      renderReasonsChart(data);
-      renderMyths(data);
-      renderPaths(data);
-      renderScoreChart(data);
-      renderScoreInsight(data);
-      renderConclusion(data);
-    })
-    .catch((e) => console.error("Failed to load commerce data:", e));
+  // Wait for Chart.js and CodexCharts to be available before loading data
+  function initWhenReady() {
+    if (typeof Chart !== "undefined" && typeof CodexCharts !== "undefined") {
+      loadData();
+    } else {
+      setTimeout(initWhenReady, 100);
+    }
+  }
+
+  function loadData() {
+    fetch("/static/data/commerce-data.json")
+      .then((r) => r.json())
+      .then((data) => {
+        renderDistributionChart(data);
+        renderDistributionInsights(data);
+        renderReasonsChart(data);
+        renderMyths(data);
+        renderPaths(data);
+        renderScoreChart(data);
+        renderScoreInsight(data);
+        renderConclusion(data);
+      })
+      .catch((e) => console.error("Failed to load commerce data:", e));
+  }
+
+  // Start initialization when page loads or immediately if already loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWhenReady);
+  } else {
+    initWhenReady();
+  }
 
   function renderDistributionChart(data) {
     const ctx = document.getElementById("distributionChart");
