@@ -127,4 +127,7 @@ const CodexCharts = (function () {
   return { applyGlobalDefaults, donut, groupedBar, horizontalBar, scatter, INK, PAPER, MIST };
 })();
 
-CodexCharts.applyGlobalDefaults();
+// Apply defaults once DOM + Chart.js are both ready
+document.addEventListener("DOMContentLoaded", function () {
+  CodexCharts.applyGlobalDefaults();
+});

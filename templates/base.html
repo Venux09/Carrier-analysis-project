@@ -6,6 +6,8 @@
 <title>{% block title %}Carrier Codex{% endblock %}</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 {% block extra_css %}{% endblock %}
+<!-- Chart.js loaded in head so it's available when page scripts run -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 </head>
 <body>
 
