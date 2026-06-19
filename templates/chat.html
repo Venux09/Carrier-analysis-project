@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}AI Career Chat — Carrier Codex{% endblock %}
+{% set active_page = 'chat' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="chat-wrapper">
+  <div class="chat-header">
+    <div class="eyebrow" style="color: var(--accent-sakura);">AI Career Advisor</div>
+    <h1>Career Chat</h1>
+    <p class="chat-sub">Ask anything about stream selection, career paths, salaries, or skills. Restricted to career advice only.</p>
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="msg assistant">
+      <div class="msg-avatar">CC</div>
+      <div class="msg-bubble">
+        Hello! I'm the Carrier Codex career advisor. Ask me anything about Science, Commerce, or Arts streams — career paths, salary expectations, skill requirements, or how to choose between them. I only discuss career-related topics.
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask about careers, streams, salaries..." autocomplete="off" />
+    <button id="sendBtn">Send</button>
+  </div>
+  <div class="chat-notice">Career advice only &middot; Powered by Claude</div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

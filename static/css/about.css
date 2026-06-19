@@ -1,0 +1,96 @@
+.about-hero {
+  padding: 72px 56px 56px;
+  border-bottom: 1px solid var(--border);
+  max-width: 820px;
+}
+
+.about-hero h1 {
+  font-size: clamp(36px, 5vw, 52px);
+  letter-spacing: -0.5px;
+  margin: 18px 0 20px;
+}
+
+.about-hero .about-para {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 660px;
+}
+
+.about-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.about-link {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.about-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.about-link.primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.about-link.primary:hover {
+  background: var(--accent-sakura);
+  border-color: var(--accent-sakura);
+}
+
+.about-section {
+  padding: 48px 56px;
+  max-width: 820px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-section h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.project-stack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stack-item {
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+}
+
+.stack-item .stack-name {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.stack-item .stack-role {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--muted-light);
+}
+
+@media (max-width: 720px) {
+  .about-hero, .about-section { padding-left: 24px; padding-right: 24px; }
+  .project-stack { grid-template-columns: 1fr 1fr; }
+}

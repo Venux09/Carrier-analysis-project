@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}About — Carrier Codex{% endblock %}
+{% set active_page = 'about' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="about-hero">
+  <div class="eyebrow" style="color: var(--accent-gold);">The Maker</div>
+  <h1>Monu Verma</h1>
+  <p class="about-para">
+    I built Carrier Codex after class 10th — sitting with the same confusion most students face when asked to pick a stream without real data, without honest numbers, and without anyone who would tell them what careers actually look like from the inside.
+  </p>
+  <p class="about-para" style="margin-top: 14px;">
+    This project started as a data analytics exercise and grew into something I wish had existed when I needed it. Every chart, every dataset, every insight here was researched and structured by hand, notebook by notebook.
+  </p>
+  <div class="about-links">
+    <a href="https://github.com/yourusername" target="_blank" class="about-link primary">GitHub →</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="about-link">LinkedIn →</a>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="section-label" style="color: var(--accent-gold);">What This Project Is</div>
+  <h2>A Data Analytics Project, Not a Career Counselor</h2>
+  <p style="font-family: var(--font-body); font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 640px;">
+    Carrier Codex converts raw career data into graphs, comparisons, trends, and honest insights — the kind of information that should exist before you make a decision that shapes the next decade of your life. It's not advice from someone who has it figured out. It's analysis from someone who had to figure it out.
+  </p>
+</div>
+
+<div class="about-section">
+  <div class="section-label" style="color: var(--accent-gold);">How It Was Built</div>
+  <h2>The Tech Stack</h2>
+  <div class="project-stack">
+    <div class="stack-item">
+      <div class="stack-name">Python</div>
+      <div class="stack-role">Data analysis</div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-name">Pandas</div>
+      <div class="stack-role">Data processing</div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-name">Jupyter</div>
+      <div class="stack-role">Research notebooks</div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-name">Flask</div>
+      <div class="stack-role">Web backend</div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-name">Chart.js</div>
+      <div class="stack-role">Interactive charts</div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-name">Claude API</div>
+      <div class="stack-role">AI Career Chat</div>
+    </div>
+  </div>
+</div>
+
+<div class="about-section" style="border-bottom: none;">
+  <div class="section-label" style="color: var(--accent-gold);">Explore the Project</div>
+  <h2>Three Streams, One AI Chat</h2>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; max-width: 600px;">
+    <a href="{{ url_for('science') }}" style="border:1px solid var(--border); padding:18px; font-family:var(--font-serif); font-size:16px; font-weight:700; color:var(--accent-science); transition:background 0.2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='transparent'">Science →</a>
+    <a href="{{ url_for('commerce') }}" style="border:1px solid var(--border); padding:18px; font-family:var(--font-serif); font-size:16px; font-weight:700; color:var(--accent-commerce); transition:background 0.2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='transparent'">Commerce →</a>
+    <a href="{{ url_for('arts') }}" style="border:1px solid var(--border); padding:18px; font-family:var(--font-serif); font-size:16px; font-weight:700; color:var(--accent-arts); transition:background 0.2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='transparent'">Arts →</a>
+    <a href="{{ url_for('chat') }}" style="border:1px solid var(--border); padding:18px; font-family:var(--font-serif); font-size:16px; font-weight:700; color:var(--accent-sakura); transition:background 0.2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='transparent'">AI Chat →</a>
+  </div>
+</div>
+
+{% endblock %}
