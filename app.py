@@ -3,18 +3,14 @@ import sqlite3
 import os
 
 try:
-    import anthropic
+    from groq import Groq
 except ImportError:
-    anthropic = None
+    Groq = None
 
-from config import AI_SYSTEM_PROMPT, DATABASE_PATH, ANTHROPIC_API_KEY
+from config import AI_SYSTEM_PROMPT, DATABASE_PATH, GROQ_API_KEY, GROQ_MODEL
 
 app = Flask(__name__)
-client = (
-    anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    if anthropic and ANTHROPIC_API_KEY
-    else None
-)
+client = Groq(api_key=GROQ_API_KEY) if Groq and GROQ_API_KEY else None
 
 
 def get_db():
@@ -109,29 +105,29 @@ def chat_send():
         (session_id,),
     ).fetchall()
 
-    # ---- MODEL CALL ----
+    # ---- MODEL CALL (Groq) ----
     if client is None:
         reply_text = (
-            "AI Chat isn't configured yet. Add your ANTHROPIC_API_KEY to the .env file "
-            "in the project root, then restart the server."
+            "AI Chat isn't configured yet. Add your GROQ_API_KEY to the "
+            ".env file in the project root, then restart the server. "
+            "Get a free key at console.groq.com."
         )
     else:
-        api_messages = [
+        api_messages = [{"role": "system", "content": AI_SYSTEM_PROMPT}]
+        api_messages += [
             {"role": r["role"], "content": r["content"]} for r in history_rows
         ]
         try:
-            response = client.messages.create(
-                model="claude-sonnet-4-6",
-                max_tokens=600,
-                system=AI_SYSTEM_PROMPT,
+            response = client.chat.completions.create(
+                model=GROQ_MODEL,
                 messages=api_messages,
+                max_tokens=600,
+                temperature=0.7,
             )
-            reply_text = "".join(
-                block.text for block in response.content if block.type == "text"
-            )
+            reply_text = response.choices[0].message.content
         except Exception as exc:
             reply_text = f"Something went wrong reaching the AI service: {exc}"
-    # ---------------------
+    # ---------------------------
 
     conn.execute(
         "INSERT INTO chat_messages (session_id, role, content) VALUES (?, ?, ?)",
