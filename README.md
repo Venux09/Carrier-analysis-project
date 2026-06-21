@@ -240,3 +240,6 @@ Every stream page shares the same `stream.css` layout skeleton (hero, data cards
 - `about.html` currently has placeholder GitHub/LinkedIn URLs (`yourusername`) that need to be swapped for real profile links before deployment.
 - No automated test suite yet — verification so far has been manual route-by-route testing (all six pages confirmed returning HTTP 200).
 - The chat does not yet feed any of the stream datasets as context, so its advice is general LLM knowledge shaped by the system prompt, not grounded in the specific notebook numbers. Wiring `science_data.json` / `commerce_data.json` / `arts_data.json` into the chat context would let it answer with the project's exact data.
+
+## Demo :-
+https://github.com/user-attachments/assets/8da2f63c-e46e-4509-943e-6bc8a982256e
